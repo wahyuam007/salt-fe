@@ -1,0 +1,13 @@
+version: '0.0.1'
+
+services:
+  app:
+    container_name: kopasus-weapon-c
+    image: kopasus-weapon-i
+    restart: always
+    build:
+      context: .
+    environment:
+      - VITE_APP_URL=http://38.47.76.208:3001
+    ports:
+      - 8083:80
